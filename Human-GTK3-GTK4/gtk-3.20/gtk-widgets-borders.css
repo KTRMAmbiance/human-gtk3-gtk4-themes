@@ -1,0 +1,193 @@
+/* Borders */
+menubar menuitem,
+.menubar.menuitem {
+    border: 1px solid transparent;
+    border-bottom-width: 0px;
+}
+
+menubar menuitem:hover,
+.menubar.menuitem:hover {
+    border: 1px solid #2e2e2c;
+    border-bottom-width: 0px;
+    border-radius: 2px 2px 0 0;
+}
+
+/*********
+ * entry *
+ *********/
+spinbutton,
+entry {
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+
+spinbutton entry,
+spinbutton entry:focus,
+spinbutton entry:disabled,
+spinbutton entry:disabled:backdrop,
+spinbutton entry:backdrop {
+    margin: 1px;
+    border-image: none;
+}
+
+.primary-toolbar entry,
+menubar toolbar entry,
+headerbar entry {
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: shade(@selected_bg_color, 0.95);
+    border-top-color: shade(@selected_bg_color, 0.95);
+    border-right-color: shade(@selected_bg_color, 0.65);
+    border-bottom-color: shade(@selected_bg_color, 0.65);
+    box-shadow: inset 1px 1px shade(@selected_bg_color, 0.65);
+}
+
+.primary-toolbar entry progress,
+menubar toolbar entry progress,
+headerbar entry progress {
+    border-radius: 2px;
+    border-width: 0;
+}
+
+headerbar box entry:focus {
+    border: 1px solid @selected_bg_color;
+    margin: 1px 0;
+    padding: 6px;
+}
+
+headerbar toolitem box entry:first-child {
+   border-width: 1px 0 1px 1px;
+   margin-left: 1px;
+}
+
+headerbar toolitem box entry:first-child:focus {
+   border-width: 1px;
+   margin: 1px 0px 1px 2px;
+}
+
+headerbar toolitem box entry:disabled {
+   border-right-width: 1px;
+   margin: 1px 1px 1px 0;
+}
+
+headerbar toolitem box entry:disabled:backdrop {
+   margin: 0 1px 0 0;
+}
+
+/******************
+ * comboboxentry *
+ ******************/
+combobox entry:first-child,
+combobox entry button:first-child {
+    border-radius: 2px 0 0 2px;
+    border-right-width: 0;
+}
+
+combobox entry:last-child,
+combobox entry button:last-child {
+    border-radius: 0 2px 2px 0;
+    border-left-width: 0;
+}
+
+/*combobox entry button {
+    border-image: -gtk-scaled(url("assets/combobox-button.png"),url("assets/combobox-button.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+combobox entry button:backdrop {
+    border-image: -gtk-scaled(url("assets/backdrop-combobox-button.png"),url("assets/backdrop-combobox-button.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+combobox entry button:focus {
+    border-image: -gtk-scaled(url("assets/combobox-button-focused.png"),url("assets/combobox-button-focused@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+combobox entry button:disabled {
+    border-image: -gtk-scaled(url("assets/combobox-button-disabled.png"),url("assets/combobox-button-disabled@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+combobox entry button:disabled:backdrop {
+    border-image: -gtk-scaled(url("assets/backdrop-combobox-button-disabled.png"),url("assets/backdrop-combobox-button-disabled@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+combobox entry button:active:focus {
+    border-image: -gtk-scaled(url("assets/combobox-button-pressed-focused.png"),url("assets/combobox-button-pressed-focused@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}*/
+
+.primary-toolbar combobox entry button,
+.primary-toolbar combobox entry button:focus:disabled,
+menubar toolbar combobox entry button,
+menubar toolbar combobox entry button:focus:disabled,
+headerbar combobox entry button,
+headerbar combobox entry button:focus:disabled {
+    border-image: -gtk-scaled(url("assets/combobox-button-toolbar.png"),url("assets/combobox-button-toolbar@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+.primary-toolbar combobox entry button:focus,
+menubar toolbar combobox entry button:focus,
+headerbar combobox entry button:focus {
+    border-image: -gtk-scaled(url("assets/combobox-button-toolbar-focused.png"),url("assets/combobox-button-toolbar-focused@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+.primary-toolbar combobox entry button:focus:active:focus,
+menubar toolbar combobox entry button:focus:active:focus,
+headerbar combobox entry button:focus:active:focus {
+    border-image: -gtk-scaled(url("assets/combobox-button-toolbar-pressed-focused.png"),url("assets/combobox-button-toolbar-pressed-focused@2.png")) 10 12 10 1 / 10px 12px 10px 1px stretch;
+}
+
+.primary-toolbar combobox entry:first-child,
+.primary-toolbar combobox entry button:first-child,
+menubar toolbar combobox entry:first-child,
+menubar toolbar combobox entry button:first-child,
+headerbar combobox entry:first-child,
+headerbar combobox entry button:first-child {
+    border-image-width: 10px 0 10px 12px;
+    border-radius: 2px 0 0 2px;
+    border-right-width: 0;
+}
+
+.primary-toolbar combobox entry:last-child,
+.primary-toolbar combobox entry button:last-child,
+menubar toolbar combobox entry:last-child,
+menubar toolbar combobox entry button:last-child,
+headerbar combobox entry:last-child,
+headerbar combobox entry button:last-child {
+    border-image-width: 10px 12px 10px 1px;
+    border-radius: 0 2px 2px 0;
+    border-left-width: 0;
+}
+
+notebook header.top tab:checked {
+    border: 1px solid shade (@bg_color, 0.75);
+}
+
+notebook header.right tab:checked {
+    border: 1px solid shade (@bg_color, 0.75);
+}
+
+notebook header.bottom tab:checked {
+    border: 1px solid shade (@bg_color, 0.75);
+}
+
+notebook header.left tab:checked {
+    border: 1px solid shade (@bg_color, 0.75);
+}
+
+.trough,
+trough,
+trough.highlight {
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+/*.trough,
+trough {
+    border-image: -gtk-scaled(url("assets/progressbar-horizontal-trough.png"),url("assets/progressbar-horizontal-trough@2.png")) 6 7 6 7 / 6px 7px 6px 7px stretch;
+}*/
+
+
+
